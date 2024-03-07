@@ -13,16 +13,17 @@
 
 \documentclass[10pt, aspectratio=169]{beamer}
 \usepackage{beamer-settings}   % customized presentation settings
+\usepackage{multirow}
 
 % presentation title
-\title[COMP ITA]{Research Presentation}
-\subtitle[*]{\LaTeX-based Example}
+\title[COMP ITA]{CodeQL}
+\subtitle[*]{Visão Geral, conjugando teoria e prática.}
 
 % author info
 \author[Surname, Name]{
-  \textbf{Author Name}\\
-  \tiny{[[Master|PhD] student | Professor]] \\
-    email@provider.br} \\
+  \textbf{Marcelo Reis}\\
+  \tiny{[Student] \\
+    crereis@gmail.com} \\
 }
 
 % author affiliation
@@ -62,18 +63,58 @@
   \frametitle{Motivation}
   
   \begin{quotation}
-    Give your research context here
+    %Give your research context here
   \end{quotation}
-  
-  \begin{itemize}
-  \item \vfill Why this subject is relevant?
-  \item \vfill What are the main drawbacks of it?
-  \end{itemize}
+\begin{center}
+	\begin{tabular}{c c}
+		\includegraphics[scale=.30]{sql-injection-infographic} & \multirow{2}{4cm}{Como listar todos os pontos do programa em que consultas são passadas por meio de strings??!!}
+		\\
+		\includegraphics[scale=.30]{SQL-Injection-code}
+	\end{tabular}
+	
+	%\includegraphics[scale=.32]{sql-injection-infographic}
+	%\includegraphics[scale=.32]{SQL-Injection-code}
+\end{center}
+
+	     
+
+  %\begin{itemize}
+  %\item \vfill Why this subject is relevant?
+  %\item \vfill What are the main drawbacks of it?
+  %\end{itemize}
 
   \vfill
   \vfill
-  Example of reference\footnote[frame]{\tiny\cite{Liu:1973aa}}
+  
+  %Example of reference\footnote[frame]{\tiny\cite{Liu:1973aa}}
 \end{frame}
+
+\begin{frame}
+	\frametitle{Motivation}
+	
+	\begin{quotation}
+		\Large{Melhor ainda....}
+	\end{quotation}
+	\begin{center}
+		
+		\includegraphics[scale=.22]{redirecionamento}
+		%\includegraphics[scale=.32]{SQL-Injection-code}
+	\end{center}
+	
+	
+	
+	%\begin{itemize}
+	%\item \vfill Why this subject is relevant?
+	%\item \vfill What are the main drawbacks of it?
+	%\end{itemize}
+	
+	\vfill
+	\vfill
+	
+	%Example of reference\footnote[frame]{\tiny\cite{Liu:1973aa}}
+\end{frame}
+
+
 
 \section{Research Goal}
 \begin{frame}
