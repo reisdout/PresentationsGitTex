@@ -14,10 +14,11 @@
 \documentclass[10pt, aspectratio=169]{beamer}
 \usepackage{beamer-settings}   % customized presentation settings
 \usepackage{multirow}
+\usepackage{hyperref}
 
 % presentation title
 \title[COMP ITA]{CodeQL}
-\subtitle[*]{Visão Geral, conjugando teoria e prática.}
+\subtitle[*]{Visão geral, conjugando teoria e prática.}
 
 % author info
 \author[Surname, Name]{
@@ -60,37 +61,108 @@
 
 \section{Motivation}
 \begin{frame}
-  \frametitle{Motivation}
-  
-  \begin{quotation}
-    %Give your research context here
-  \end{quotation}
-\begin{center}
-	\begin{tabular}{c c}
-		\includegraphics[scale=.30]{sql-injection-infographic} & \multirow{2}{4cm}{Como listar todos os pontos do programa em que consultas são passadas por meio de strings??!!}
-		\\
-		\includegraphics[scale=.30]{SQL-Injection-code}
-	\end{tabular}
+	\frametitle{Motivation}
 	
-	%\includegraphics[scale=.32]{sql-injection-infographic}
-	%\includegraphics[scale=.32]{SQL-Injection-code}
-\end{center}
+	\begin{quotation}
+		%Give your research context here
+	\end{quotation}
+	\begin{center}
+		\begin{tabular}{c m{5cm}}
+			\includegraphics[scale=.15]{shifit_left_cuted} &\vspace{-1.5cm} \textbf{Como listar e navegar nos pontos do programa cujo padrão sugere uma vulnerabilidade, antes da produção??}
+			\\
+		\includegraphics[scale=.12]{redirecionamento}&\vspace{-2.0cm} \includegraphics[scale=.12]{logoCodeQL}
+		\end{tabular}
+		
+		%\includegraphics[scale=.32]{sql-injection-infographic}
+		%\includegraphics[scale=.32]{SQL-Injection-code}
+	\end{center}
+	
+	
+	
+	%\begin{itemize}
+	%\item \vfill Why this subject is relevant?
+	%\item \vfill What are the main drawbacks of it?
+	%\end{itemize}
+	
+	\vfill
+	\vfill
+	
+	%Example of reference\footnote[frame]{\tiny\cite{Liu:1973aa}}
+\end{frame}
 
-	     
 
-  %\begin{itemize}
-  %\item \vfill Why this subject is relevant?
-  %\item \vfill What are the main drawbacks of it?
-  %\end{itemize}
+\section{CodeQL}
+\begin{frame}
+  \frametitle{Definição e Princípios} 
 
-  \vfill
-  \vfill
-  
-  %Example of reference\footnote[frame]{\tiny\cite{Liu:1973aa}}
+  \begin{enumerate}
+  \item \vfill Ferramenta de análise de análise estática.
+  \item \vfill Trata o código com dado
+  \end{enumerate}
+\begin{figure} 
+	
+	\includegraphics[scale=.25]{codeQLSchema}
+
+\end{figure}
+	
+ 
+
+
+\end{frame}
+
+
+\section{Exemplo 1}
+\begin{frame}
+	\frametitle{Esquentando}
+	  \begin{itemize}
+		\item  Analisar a ``Blocos Vazios''.
+		\item  Retornos compostos por somas.
+		\begin{itemize}
+			\item return x+y;	
+		\end{itemize}
+		\item Comentários /*TODO.....
+		\item Métodos com apenas um argumento
+		
+	\end{itemize}
+	
+	
+	
+\end{frame}
+
+
+\section{SQL-Injection}
+\begin{frame}
+	\frametitle{SQL-Injection}
+	
+	\begin{quotation}
+		%Give your research context here
+	\end{quotation}
+	\begin{center}
+		\begin{tabular}{c c}
+			\includegraphics[scale=.30]{sql-injection-infographic} & \multirow{2}{4cm}{Como listar todos os pontos do programa em que consultas são passadas por meio de strings??!!}
+			\\
+			\includegraphics[scale=.30]{SQL-Injection-code}
+		\end{tabular}
+		
+		%\includegraphics[scale=.32]{sql-injection-infographic}
+		%\includegraphics[scale=.32]{SQL-Injection-code}
+	\end{center}
+	
+	
+	
+	%\begin{itemize}
+	%\item \vfill Why this subject is relevant?
+	%\item \vfill What are the main drawbacks of it?
+	%\end{itemize}
+	
+	\vfill
+	\vfill
+	
+	%Example of reference\footnote[frame]{\tiny\cite{Liu:1973aa}}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Motivation}
+	\frametitle{SQL-Injection}
 	
 	\begin{quotation}
 		\Large{Melhor ainda....}
@@ -116,73 +188,58 @@
 
 
 
-\section{Research Goal}
+\section{XSS}
 \begin{frame}
-  \frametitle{Research Goal}
-
-  \begin{enumerate}
-  \item \vfill Clearly state your research goal \pause
-  \item \vfill You may also give a research question in here \pause
-  \item \vfill And, your expected contributions to your research area
-  \end{enumerate}
+	\frametitle{XSS}
+	
+	\begin{quotation}
+		Execução de um trecho de código indesejado. 
+	\end{quotation}
+	\begin{center}
+		\begin{tabular}{c c}
+			\includegraphics[scale=.30]{xss} & \multirow{2}{4cm}{Como listar todos os pontos do programa em que consultas são passadas por meio de strings??!!}
+			\\
+			\includegraphics[scale=.30]{SQL-Injection-code}
+		\end{tabular}
+		
+		%\includegraphics[scale=.32]{sql-injection-infographic}
+		%\includegraphics[scale=.32]{SQL-Injection-code}
+	\end{center}
+	
+	
+	
+	%\begin{itemize}
+	%\item \vfill Why this subject is relevant?
+	%\item \vfill What are the main drawbacks of it?
+	%\end{itemize}
+	
+	\vfill
+	\vfill
+	
+	%Example of reference\footnote[frame]{\tiny\cite{Liu:1973aa}}
 \end{frame}
 
-\section{Development \& Methods}
-\begin{frame}
-  \frametitle{Development \& Methods}
-  Present you development here
-
-  \vfill
-  Which methods have you used to go through your research?
-\end{frame}
-
-\section{Results and Discussions}
-\begin{frame}
-  \frametitle{Results}
-
-  \begin{itemize}
-  \item Which results did you achieved? \pause
-  \item Are they preliminary, final? Explain them all
-  \end{itemize}		
-\end{frame}
 
 \section{Conclusion}
 \begin{frame}
   \frametitle{Conclusion}
-  Respond to your research question here, \emph{i.e.}, which was your
-  contribution and work limitations
-\end{frame}
+  	\begin{quotation}
+  	Bem-vindo ao vasto mundo do codeQL. 
+  \end{quotation}
+  
+ \end{frame}
 
-
-\section{References}
-\begin{frame}
-  \frametitle{References}
-  
-  \scriptsize
-  Never forget to cite your sources...
-  
-  \nocite{Ganssle:2000aa, Liu:1973aa, Douglass:2003aa}
-  
-  \setlength\bibitemsep{\baselineskip}
-  \renewcommand*{\bibfont}{\scriptsize}
-  \printbibliography
-\end{frame}
 
 \section{Questions \& Answers}
 \begin{frame}
   \frametitle{Questions \& Answers}
 
   \begin{quotation}
-  Prepare for the worst, hope for the best!\\    
   \end{quotation}
   \flushright
-  Benjamin Disraeli
+
 \end{frame}
 
-\begin{frame}
-  \frametitle{Enjoy your research}
-  
-\end{frame}
 
 \end{document}
 
